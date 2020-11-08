@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
     <!-- Google font -->
@@ -14,7 +15,24 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <title>タイトル</title>
   </head>
-  <body>
+  <body class="drawer drawer--right">
+    <!-- drawer.js -->
+    <div role="banner">
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <spans class="sr-only">toggle navigation</spans>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li><a class="drawer-brand" href="#">メニュー</a></li>
+          <li><a class="drawer-menu-item" href="#">トップ</a></li>
+          <li><a class="drawer-menu-item" href="#">おしらせ</a></li>
+          <li><a class="drawer-menu-item" href="#profile">事務所案内</a></li>
+          <li><a class="drawer-menu-item" href="">税理士ブログ</a></li>
+          <li><a class="drawer-menu-item" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="headline">
       <div class="inner">
         <span class="headline__txt">世田谷区を中心に活動する 、ベンチャー企業に特化した税理士会計事務所です。</span>
@@ -127,7 +145,7 @@
         </div>
       </section>
 
-      <section class="customer" data-wow-delay=".8s">
+      <section id="customer" class="customer" data-wow-delay=".8s">
         <div class="inner wow fadeInLeft">
           <h2 class="customer__ttl">お客様へ</h2>
           <p class="customer__txt">このようなお悩みがあれば<br class="br-sp" />是非ご相談ください！</p>
@@ -142,7 +160,7 @@
         </div>
       </section>
 
-      <section class="news" data-wow-delay=".8s">
+      <section id="news" class="news" data-wow-delay=".8s">
         <div class="inner wow fadeInLeft">
           <h2 class="news__ttl">ニュース</h2>
           <div class="tab-area">
@@ -283,7 +301,7 @@
                   </tr>
                   <tr class="access-table__tr">
                     <th class="access-table__th">最寄り駅</th>
-                    <td class="access-table__td">小田急電鉄　東急世田谷線「世田谷駅」より徒歩10分</td>
+                    <td class="access-table__td">東急世田谷線「世田谷駅」より徒歩10分</td>
                   </tr>
                   <tr class="access-table__tr">
                     <th class="access-table__th">電話番号</th>
@@ -324,6 +342,8 @@
     <script src="js/wow.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

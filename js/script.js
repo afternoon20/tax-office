@@ -39,3 +39,7 @@ $(function () {
 });
 
 $('.carousel').carousel();
+
+$(document).ready(function () {
+  $('.drawer').drawer();
+});

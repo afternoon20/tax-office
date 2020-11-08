@@ -1,0 +1,63 @@
+.customer {
+  text-align: center;
+  background: url(../img/dist/service03.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+
+  .customer__ttl {
+    @extend %top-h2;
+    font-weight: 600;
+  }
+
+  .customer__txt {
+    @extend %top-h3;
+    font-weight: 600;
+  }
+
+  .customer-list {
+    width: 80%;
+    text-align: left;
+    margin: 8px auto 40px;
+    padding: 32px 16px;
+    border: 4px solid $base-color;
+    background-color: lighten($base-color, 50%);
+    border-radius: 5px;
+
+    @include mq('sp') {
+      width: 100%;
+    }
+
+    .customer-list__item {
+      position: relative;
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 32px;
+      padding-left: 56px;
+      font-weight: 600;
+
+      @include mq('sp') {
+        font-size: 16px;
+        padding-left: 30px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .customer-list__icon {
+      position: absolute;
+      top: -8px;
+      left: 0;
+      font-size: 48px;
+      color: $base-color;
+
+      @include mq('sp') {
+        // display: none;
+        font-size: 24px;
+        top: 2px;
+      }
+    }
+  }
+}

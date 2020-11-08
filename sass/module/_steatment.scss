@@ -1,0 +1,57 @@
+.steatment {
+  .steatment__ttl {
+    @extend %top-h2;
+  }
+
+  .steatment-wrapper {
+    @include flex($align: flex-start);
+  }
+
+  .steatment__left {
+    width: 50%;
+    text-align: center;
+
+    @include mq('tab') {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .steatment__img {
+      @include shadow();
+      width: 400px;
+      height: auto;
+      border-radius: 5px;
+
+      @include mq('sp') {
+        width: 100%;
+      }
+    }
+  }
+
+  .steatment__right {
+    width: 50%;
+
+    @include mq('tab') {
+      width: 100%;
+      text-align: center;
+    }
+
+    .steatment__speach {
+      @extend %top-h3;
+      margin-bottom: 16px;
+    }
+
+    .steatment__txt {
+      font-size: 16px;
+      margin-bottom: 16px;
+
+      @include mq('tab') {
+        text-align: left;
+      }
+    }
+
+    .steatment__txt--rep {
+      text-align: right;
+    }
+  }
+}

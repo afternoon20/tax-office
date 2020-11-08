@@ -1,0 +1,36 @@
+.tab-area {
+  @include flex($justify: center);
+  border-bottom: 4px solid $base-color;
+
+  .tab {
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: grey;
+    width: 200px;
+    padding: 8px;
+
+    @include mq('sp') {
+      width: 50%;
+    }
+  }
+  .tab--active {
+    background-color: $base-color;
+    border: none;
+  }
+}
+
+.contents-area {
+  background-color: #fff;
+  @include shadow();
+
+  .contents {
+    display: none;
+    background-color: #fff;
+    margin: 0 16px;
+    padding: 16px 0 32px;
+  }
+  .contents--show {
+    display: block;
+  }
+}

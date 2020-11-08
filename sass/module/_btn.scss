@@ -1,0 +1,19 @@
+.btn {
+  @include shadow();
+  background-color: $emp-color;
+  font-size: 16px;
+  padding: 16px 32px 16px 20px;
+  border-radius: 5px;
+  position: relative;
+
+  &::after {
+    @include awesome('\f0da');
+    position: absolute;
+    top: 25%;
+    right: 10%;
+  }
+
+  &:hover {
+    background-color: darken($emp-color, 10%);
+  }
+}

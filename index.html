@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon.ico" />
     <title>タイトル</title>
   </head>
   <body>
+    <div class="headline">
+      <div class="inner">
+        <span class="headline__txt">世田谷区を中心に活動する 、ベンチャー企業に特化した税理士会計事務所です。</span>
+      </div>
+    </div>
     <header class="header">
       <div class="inner">
         <div class="header-wrapper">
           <h1 class="header-logo">
-            <a href="/" class="header-logo__link">ロゴ</a></h1>
+            <a href="/" class="header-logo__link">山田太郎税理士事務所</a>
+          </h1>
           <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__list-item"><a href="" class="header-nav__list-link">トップ</a></li>
-              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">メニュー</a></li>
-              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">メニュー</a></li>
-              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">メニュー</a></li>
-              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">メニュー</a></li>
+              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">お知らせ</a></li>
+              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">事務所案内</a></li>
+              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">税理士ブログ</a></li>
+              <li class="header-nav__list-item"><a href="" class="header-nav__list-link">お問い合わせ</a></li>
             </ul>
           </nav>
         </div>
@@ -30,14 +38,215 @@
     </header>
     <main id="main">
       <!-- メインビジュアル -->
-      <section id="mv" class="mv">
+      <div id="mv" class="mv">
         <div class="inner"></div>
+      </div>
+
+      <section id="service" class="service">
+        <div class="inner">
+          <h2 class="service__ttl">サービス内容</h2>
+
+          <ul class="service-list">
+            <li class="service-list__item">
+              <div class="service-list__img service-list__img--01"></div>
+              <h3 class="service-list__ttl">税務顧問・税務申告</h3>
+              <p class="service-list__txt">ベンチャー企業を中心に、税務顧問業務、税務申告業務のみならず、税務上最も望ましいスキームの確立をサポートします。</p>
+            </li>
+            <li class="service-list__item">
+              <div class="service-list__img service-list__img--03"></div>
+              <h3 class="service-list__ttl">会計アウトソーシング</h3>
+              <p class="service-list__txt">
+                記帳代行や振込業務、月次報告書の作成等の経理部門のサポートをいたします。財務会計システムの導入支援も行っております。
+              </p>
+            </li>
+            <li class="service-list__item">
+              <div class="service-list__img service-list__img--02"></div>
+              <h3 class="service-list__ttl">給与計算・社会保険業務</h3>
+              <p class="service-list__txt">給与計算や各種社会保険業務を、社会保険労務士と連携しながらサポートいたします。法定調書の作成も対応可能です。</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="steatment" class="steatment">
+        <div class="inner">
+          <h2 class="steatment__ttl">代表挨拶</h2>
+          <div class="steatment-wrapper">
+            <div class="steatment__left">
+              <img src="img/dist/person01.png" alt="代表　山田太郎の写真" class="steatment__img" />
+            </div>
+            <div class="steatment__right">
+              <em class="steatment__speach">お客様の第一の理解者として<br class="br-sp" />サポートしたい</em>
+              <p class="steatment__txt">山田太郎税理士事務所は、ベンチャー企業の経営サポートに特化した税理士事務所です。</p>
+              <p class="steatment__txt">
+                私は、大学在学中に税理士資格を取得しました。卒業後は大手税理士法人に5年間勤務し、ベンチャー企業の経営サポートに従事してきました。その後退職し、地元である世田谷区にて開業しました。
+              </p>
+              <p class="steatment__txt">
+                現在では、地域の中小企業や個人事業主を中心に数多くのお客様のサポートをしてきました。おかげさまで、今では年間100社以上のお客様の経営サポートを行っております。
+              </p>
+
+              <p class="steatment__txt">
+                また、定期的に無料セミナーを開催しておりますので、是非ご参加ください。会社経営や節税に関するお得な情報をご提供しています。また、講演会のご依頼も受け付けておりますので、お気軽にご連絡ください。
+              </p>
+              <p class="steatment__txt steatment__txt--rep">-代表　山田太郎-</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="customer">
+        <div class="inner">
+          <h2 class="customer__ttl">お客様へ</h2>
+          <p class="customer__txt">このようなお悩みがあれば<br class="br-sp" />是非ご相談ください！</p>
+          <ul class="customer-list">
+            <li class="customer-list__item"><i class="customer-list__icon fas fa-check-circle"></i>地元で会社設立を考えている。</li>
+            <li class="customer-list__item"><i class="customer-list__icon fas fa-check-circle"></i>ベンチャー企業に詳しい税理士を探している。</li>
+            <li class="customer-list__item"><i class="customer-list__icon fas fa-check-circle"></i>会社設立・企業の費用や融資について知りたい。</li>
+            <li class="customer-list__item"><i class="customer-list__icon fas fa-check-circle"></i>個人事業から法人化のメリットを知りたい。</li>
+          </ul>
+          <div class="customer__arrow"></div>
+          <a href="" class="btn">お問い合わせ</a>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="inner">
+          <h2 class="news__ttl">NEWS</h2>
+          <div class="tab-area">
+            <div class="tab tab--active">お知らせ</div>
+            <div class="tab">税理士ブログ</div>
+          </div>
+          <div class="contents-area">
+            <div class="contents contents--show">
+              <ul class="news-list">
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.10.10</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
+                  <a href="" class="news-list__ttl">東京都主催「税理士試験対策セミナー」に登壇いたしました</a>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.07.10</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">お知らせ</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">2020年夏季休暇のお知らせ</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.04.30</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">相続税相談会を開催いたします</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.03.20</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">セミナー「持続化給付金の申請方法について」を開催します</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.01.01</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">お知らせ</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">2020年年始のご挨拶</a></span>
+                </li>
+              </ul>
+              <div class="news-wrapper">
+                <a href="#" class="news__btn">もっと見る</a>
+              </div>
+            </div>
+            <div class="contents">
+              <ul class="news-list">
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.07.10</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">その他</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">2020年から酒税が改正されます</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.04.30</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">法人税</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">固定資産と減価償却費について</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.03.20</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">法人税</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">令和２年度税制改正について</a></span>
+                </li>
+                <li class="news-list__item">
+                  <span class="news-list__date">2020.01.12</span>
+                  <span class="news-list__cat"><a href="" class="news-list__cat-link">所得税</a></span>
+                  <span class="news-list__ttl"><a href="#" class="news-list__link">払い忘れの源泉税について</a></span>
+                </li>
+              </ul>
+              <div class="news-wrapper">
+                <a href="#" class="news__btn">もっと見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="question">
+        <div class="inner">
+          <h2 class="question__ttl">よくある質問</h2>
+          <div class="accordion">
+            <div class="accordion__top">
+              <i class="far fa-question-circle accordion__ttl--icon"></i>
+              <h3 class="accordion__ttl">初回の相談は料金がかかりますか？</h3>
+            </div>
+            <p class="accordion__bottom">いいえ、かかりません。お気軽にご相談ください。</p>
+          </div>
+          <div class="accordion">
+            <div class="accordion__top">
+              <i class="far fa-question-circle accordion__ttl--icon"></i>
+              <h3 class="accordion__ttl">どのような業種を扱っていますか？</h3>
+            </div>
+            <p class="accordion__bottom">
+              主な顧問先は、製造業、IT業界、飲食業、人材派遣であります。その他の業種につきましても、経験豊富なスタッフも揃えておりますので、満足いただけるサービスをご提供することができます。
+            </p>
+          </div>
+          <div class="accordion">
+            <div class="accordion__top">
+              <i class="far fa-question-circle accordion__ttl--icon"></i>
+              <h3 class="accordion__ttl">会計ソフトを導入したいのですがどうすればよろしいですか。</h3>
+            </div>
+            <p class="accordion__bottom">当事務所では、弥生会計、勘定奉行を使っておりますのでどちらかを選択していただくことになります。</p>
+          </div>
+          <div class="accordion">
+            <div class="accordion__top">
+              <i class="far fa-question-circle accordion__ttl--icon"></i>
+              <h3 class="accordion__ttl">担当地域はどこですか。</h3>
+            </div>
+            <p class="accordion__bottom">
+              主な顧問先は世田谷区ですが、メールやビデオ会議が可能でしたら全国どこまでも対応しております。お気軽にご連絡ください。
+            </p>
+          </div>
+          <div class="accordion">
+            <div class="accordion__top">
+              <i class="far fa-question-circle accordion__ttl--icon"></i>
+              <h3 class="accordion__ttl">税務申告書の作成のみお願いしたいのですが可能でしょうか。</h3>
+            </div>
+            <p class="accordion__bottom">はい、可能でございます。当事務所では、税務申告書作成のみ、帳簿作成のみといったご依頼も柔軟に対応しおります。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="access">
+        <div class="inner">
+          <h2 class="access__ttl">ACCSESS</h2>
+          <iframe
+            class="access-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4880141904205!2d139.69838261525297!3d35.68960668019232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd0d6b1ba1f%3A0x1c32a1f1ecacfdd5!2z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1604737924356!5m2!1sja!2sjp"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
       </section>
     </main>
 
-    <footer class="fotter">
-
-      <div class="inner"></div>
+    <footer class="footer">
+      <div class="inner">
+        <div class="footer-wrapper">
+          <p class="footer__copy">Copyright © 2020 Taro Yamada Tax Office All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,0 +1,60 @@
+.service {
+  .service__ttl {
+    @extend %top-h2;
+  }
+
+  .service-list {
+    @include flex($align: flex-start);
+    margin-bottom: 32px;
+
+    .service-list__item {
+      text-align: center;
+      width: calc(33.333% - 48px / 3);
+      margin-right: 24px;
+      padding: 16px;
+
+      @include mq('sp') {
+        width: 100%;
+        margin: 0 0 32px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .service-list__img {
+        background-color: red;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      @for $i from 1 through 3 {
+        .service-list__img--0#{$i} {
+          background: url(../img/dist/service0#{$i}.jpg) center center no-repeat;
+          background-size: cover;
+        }
+      }
+
+      .service-list__ttl {
+        @extend %top-h3;
+        margin: 16px 0;
+        color: $base-color;
+
+        @include mq('sp') {
+          margin-bottom: 8px;
+        }
+      }
+
+      .service-list__txt {
+        text-align: left;
+        font-size: 16px;
+
+        @include mq('sp') {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

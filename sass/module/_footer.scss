@@ -1,0 +1,15 @@
+.footer {
+  height: 60px;
+  text-align: center;
+  background-color: $base-color;
+  color: #fff;
+
+  .footer-wrapper {
+    @include flex($align: center, $justify: center);
+    height: 100%;
+  }
+
+  .footer__copy {
+    font-size: 16px;
+  }
+}

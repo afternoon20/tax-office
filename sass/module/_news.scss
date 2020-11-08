@@ -1,0 +1,87 @@
+.news {
+  font-size: 16px;
+
+  .news__ttl {
+    @extend %top-h2;
+  }
+
+  .news-list {
+    @include flex();
+    // width: 80%;
+    margin: 0 auto 40px auto;
+
+    .news-list__item {
+      @include flex($justify: flex-start);
+      width: 100%;
+      padding: 16px;
+      border-bottom: 1px dashed #000;
+
+      @include mq('sp') {
+        padding-bottom: 8px;
+      }
+
+      .news-list__date {
+        width: 10%;
+
+        @include mq('sp') {
+          width: 50%;
+        }
+      }
+
+      .news-list__cat {
+        display: block;
+        width: 15%;
+        text-align: center;
+        margin: 0 32px;
+
+        @include mq('sp') {
+          width: 50%;
+          margin: 0;
+        }
+
+        .news-list__cat-link {
+          display: block;
+          color: #fff;
+          background-color: lighten($base-color, 10%);
+          padding: 8px;
+
+          @include mq('sp') {
+            padding: 4px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .news-list__ttl {
+        display: block;
+        width: calc(75% - 64px); //日付とカテゴリ、マージンをの差分
+
+        @include mq('sp') {
+          width: 100%;
+          margin-top: 8px;
+          font-size: 14px;
+        }
+      }
+
+      .news-list__link {
+        display: block;
+      }
+    }
+  }
+
+  .news-wrapper {
+    // width: 80%;
+    text-align: center;
+
+    display: block;
+  }
+
+  .news__btn {
+    display: inline-block;
+    color: #fff;
+    background-color: $emp-color;
+    font-size: 16px;
+    padding: 8px 32px;
+    // border-radius: 5px;
+  }
+}

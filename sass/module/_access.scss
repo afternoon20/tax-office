@@ -1,0 +1,10 @@
+.access {
+  .access__ttl {
+    @extend %top-h2;
+  }
+  .access-map {
+    margin-bottom: 32px;
+    width: 100%;
+    height: 300px;
+  }
+}

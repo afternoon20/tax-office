@@ -1,10 +1,14 @@
 .headline {
   background-color: lighten($base-color, 45%);
+  height: 32px;
+  padding: 8px 0;
+
+  @include mq('sp') {
+    display: none;
+  }
 
   .headline__txt {
-    height: 32px;
     display: block;
     font-size: 10px;
-    padding: 8px 0;
   }
 }

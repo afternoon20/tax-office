@@ -1,6 +1,7 @@
 .service {
   .service__ttl {
     @extend %top-h2;
+    margin-top: 30px;
   }
 
   .service-list {

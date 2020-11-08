@@ -25,3 +25,17 @@ $(function () {
     $('.contents').removeClass('contents--show').eq(index).addClass('contents--show');
   });
 });
+
+// Wow.jsの読み込み
+new WOW().init();
+
+// owl-carousel
+$(function () {
+  $('.owl-carousel').owlCarousel({
+    loop: true, //項目をループさせる
+    margin: 10, //itemの間隔
+    items: 1, //表示する項目数
+  });
+});
+
+$('.carousel').carousel();

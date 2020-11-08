@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
     <!-- Google font -->
@@ -39,11 +41,46 @@
     <main id="main">
       <!-- メインビジュアル -->
       <div id="mv" class="mv">
-        <div class="inner"></div>
+        <!-- カルーセル -->
+        <div id="mv-carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#mv-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mv-carousel" data-slide-to="1"></li>
+            <li data-target="#mv-carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-contents">
+              <div class="inner inner--carousel">
+                <div class="carousel-wrapper">
+                  <h2 class="carousel__ttl">お客様の第一の理解者<br class="br-sp" />としてサポートしたい</h2>
+                  <p class="carousel__txt">〜無料相談受け付けております〜</p>
+                  <a href="" class="btn carousel__btn">お問い合わせ</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item--01 active">
+              <!-- <img src="img/dist/mv01.jpg" class="d-block w-100" alt="..." /> -->
+            </div>
+            <div class="carousel-item carousel-item--02">
+              <!-- <img src="img/dist/key_visual2.jpg" class="d-block w-100" alt="..." /> -->
+            </div>
+            <div class="carousel-item carousel-item--03">
+              <!-- <img src="img/dist/key_visual3.jpg" class="d-block w-100" alt="..." /> -->
+            </div>
+          </div>
+          <!-- <a class="carousel-control-prev" href="#mv-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#mv-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+        </div>
       </div>
 
-      <section id="service" class="service">
-        <div class="inner">
+      <section id="service" class="service" 　data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="service__ttl">サービス内容</h2>
 
           <ul class="service-list">
@@ -68,8 +105,8 @@
         </div>
       </section>
 
-      <section id="steatment" class="steatment">
-        <div class="inner">
+      <section id="steatment" class="steatment" data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="steatment__ttl">代表挨拶</h2>
           <div class="steatment-wrapper">
             <div class="steatment__left">
@@ -90,8 +127,8 @@
         </div>
       </section>
 
-      <section class="customer">
-        <div class="inner">
+      <section class="customer" data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="customer__ttl">お客様へ</h2>
           <p class="customer__txt">このようなお悩みがあれば<br class="br-sp" />是非ご相談ください！</p>
           <ul class="customer-list">
@@ -105,8 +142,8 @@
         </div>
       </section>
 
-      <section class="news">
-        <div class="inner">
+      <section class="news" data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="news__ttl">ニュース</h2>
           <div class="tab-area">
             <div class="tab tab--active">お知らせ</div>
@@ -116,27 +153,27 @@
             <div class="contents contents--show">
               <ul class="news-list">
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.10.10</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.10.10</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
                   <a href="" class="news-list__ttl">東京都主催「税理士試験対策セミナー」に登壇いたしました</a>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.07.10</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.07.10</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">お知らせ</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">2020年夏季休暇のお知らせ</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.04.30</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.04.30</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">相続税相談会を開催いたします</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.03.20</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.03.20</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">イベント</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">セミナー「持続化給付金の申請方法について」を開催します</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.01.01</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.01.01</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">お知らせ</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">2020年年始のご挨拶</a></span>
                 </li>
@@ -148,22 +185,22 @@
             <div class="contents">
               <ul class="news-list">
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.07.10</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.07.10</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">その他</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">2020年から酒税が改正されます</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.04.30</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.04.30</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">法人税</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">固定資産と減価償却費について</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.03.20</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.03.20</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">法人税</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">令和２年度税制改正について</a></span>
                 </li>
                 <li class="news-list__item">
-                  <span class="news-list__date">2020.01.12</span>
+                  <span class="news-list__date"><i class="far fa-clock"></i>2020.01.12</span>
                   <span class="news-list__cat"><a href="" class="news-list__cat-link">所得税</a></span>
                   <span class="news-list__ttl"><a href="#" class="news-list__link">払い忘れの源泉税について</a></span>
                 </li>
@@ -176,8 +213,8 @@
         </div>
       </section>
 
-      <section class="question">
-        <div class="inner">
+      <section class="question" data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="question__ttl">よくある質問</h2>
           <div class="accordion">
             <div class="accordion__top">
@@ -228,8 +265,8 @@
         </div>
       </section>
 
-      <section class="access">
-        <div class="inner">
+      <section class="access" data-wow-delay=".8s">
+        <div class="inner wow fadeInLeft">
           <h2 class="access__ttl">アクセス</h2>
 
           <div class="access-list">
@@ -284,6 +321,9 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

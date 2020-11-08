@@ -299,9 +299,17 @@ section:nth-child(odd) {
   background-color: #e79c2a;
   border-radius: 5px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #fff;
   font-size: 16px;
   padding: 16px 32px 16px 20px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    font-size: 14px;
+    padding: 8px 22px 8px 16px;
+  }
 }
 
 .btn::after {
@@ -315,8 +323,114 @@ section:nth-child(odd) {
   top: 25%;
 }
 
+@media screen and (max-width: 767px) {
+  .btn::after {
+    right: 5%;
+    top: 25%;
+  }
+}
+
 .btn:hover {
   background-color: #c88116;
+  color: #fff;
+}
+
+.carousel .carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel .carousel-indicators li {
+  background-color: grey;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #2f87bf;
+}
+
+.carousel .carousel-inner .carousel-wrapper {
+  bottom: 30%;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .carousel-inner .carousel-wrapper {
+    bottom: 20%;
+  }
+}
+
+.carousel .carousel-inner .carousel-contents {
+  background-color: rgba(50, 50, 50, 0.6);
+  height: 100%;
+  left: 5%;
+  padding: 32px;
+  position: absolute;
+  width: 50%;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .carousel-inner .carousel-contents {
+    padding: 16px;
+    width: 70%;
+  }
+}
+
+.carousel .carousel-inner .carousel-contents .carousel__ttl {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .carousel-inner .carousel-contents .carousel__ttl {
+    font-size: 16px;
+  }
+}
+
+.carousel .carousel-inner .carousel-contents .carousel__txt {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .carousel-inner .carousel-contents .carousel__txt {
+    font-size: 10px;
+  }
+}
+
+.carousel .carousel-inner .carousel-item {
+  height: 480px;
+}
+
+@media screen and (max-width: 1149px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .carousel-inner .carousel-item {
+    height: 320px;
+  }
+}
+
+.carousel .carousel-inner .carousel-item--01 {
+  background: url(../img/dist/mv01.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.carousel .carousel-inner .carousel-item--02 {
+  background: url(../img/dist/mv02.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.carousel .carousel-inner .carousel-item--03 {
+  background: url(../img/dist/mv03.jpg) top center no-repeat;
+  background-size: cover;
 }
 
 .customer {
@@ -493,18 +607,13 @@ section:nth-child(odd) {
   }
 }
 
-.mv {
-  background: rgba(50, 50, 50, 0.3) center center;
-  background-size: cover;
-  height: calc(100vh - 160px);
-  margin-top: -60px;
+.inner--carousel {
+  position: relative;
 }
 
-@media screen and (max-width: 767px) {
-  .mv {
-    height: calc(100vh - 80px);
-    text-align: center;
-  }
+.mv {
+  background: rgba(50, 50, 50, 0.6) center center;
+  background-size: cover;
 }
 
 .mv .mv-table {
@@ -584,26 +693,27 @@ section:nth-child(odd) {
 }
 
 .news .news-list .news-list__item .news-list__date {
-  width: 10%;
+  width: 15%;
 }
 
 @media screen and (max-width: 767px) {
   .news .news-list .news-list__item .news-list__date {
-    width: 96px;
+    width: 128px;
   }
 }
 
 .news .news-list .news-list__item .news-list__cat {
   display: block;
-  margin: 0 32px;
+  margin-right: 32px;
   text-align: center;
   width: 15%;
 }
 
 @media screen and (max-width: 767px) {
   .news .news-list .news-list__item .news-list__cat {
+    font-size: 14px;
     margin: 0;
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -624,7 +734,7 @@ section:nth-child(odd) {
 
 .news .news-list .news-list__item .news-list__ttl {
   display: block;
-  width: calc(75% - 64px);
+  width: calc(70% - 64px);
 }
 
 @media screen and (max-width: 767px) {
@@ -650,6 +760,10 @@ section:nth-child(odd) {
   display: inline-block;
   font-size: 16px;
   padding: 8px 32px;
+}
+
+.service .service__ttl {
+  margin-top: 30px;
 }
 
 .service .service-list {

@@ -5,15 +5,26 @@
   padding: 16px 32px 16px 20px;
   border-radius: 5px;
   position: relative;
+  color: #fff;
 
+  @include mq('sp') {
+    font-size: 14px;
+    padding: 8px 22px 8px 16px;
+  }
   &::after {
     @include awesome('\f0da');
     position: absolute;
     top: 25%;
     right: 10%;
+
+    @include mq('sp') {
+      top: 25%;
+      right: 5%;
+    }
   }
 
   &:hover {
     background-color: darken($emp-color, 10%);
+    color: #fff;
   }
 }

@@ -1,12 +1,11 @@
 .mv {
   background: $mv-color center center;
   background-size: cover;
-  height: calc(100vh - 160px);
-  margin-top: -60px;
+  // height: calc(100vh - 160px);
+  // margin-top: -60px;
 
   @include mq('sp') {
-    height: calc(100vh - 80px);
-    text-align: center;
+    // height: calc(100vh - 80px);
   }
 
   .mv-table {

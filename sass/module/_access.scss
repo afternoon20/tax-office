@@ -2,9 +2,54 @@
   .access__ttl {
     @extend %top-h2;
   }
-  .access-map {
+
+  .access-list {
+    @include flex($align: flex-start);
     margin-bottom: 32px;
-    width: 100%;
-    height: 300px;
+
+    .access-list__item {
+      width: 50%;
+
+      @include mq('sp') {
+        width: 100%;
+      }
+    }
+    .access-map {
+      @include shadow();
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+.access-table {
+  font-size: 16px;
+  text-align: left;
+  padding: 0 16px 16px 16px;
+  border-collapse: separate;
+  border-spacing: 0 32px;
+
+  @include mq('sp') {
+    font-size: 14px;
+  }
+
+  .access-table__th {
+    border-right: 2px solid $base-color;
+    padding-right: 16px;
+
+    @include mq('sp') {
+      font-size: 14px;
+      width: 80px;
+      padding-right: 8px;
+    }
+  }
+
+  .access-table__td {
+    padding-left: 16px;
+
+    @include mq('sp') {
+      font-size: 14px;
+      padding-right: 8px;
+    }
   }
 }

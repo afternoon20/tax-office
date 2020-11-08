@@ -24,7 +24,7 @@
         width: 10%;
 
         @include mq('sp') {
-          width: 50%;
+          width: 96px;
         }
       }
 
@@ -48,6 +48,7 @@
           @include mq('sp') {
             padding: 4px;
             font-size: 14px;
+            width: 96px;
           }
         }
       }

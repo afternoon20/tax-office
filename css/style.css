@@ -79,8 +79,7 @@ body {
 
 section {
   display: block;
-  margin: 32px 0;
-  padding: 40px 0;
+  padding: 40px 0 96px;
 }
 
 section:nth-child(odd) {
@@ -89,7 +88,7 @@ section:nth-child(odd) {
 
 .access .access__ttl, .customer .customer__ttl, .news .news__ttl, .question .question__ttl, .service .service__ttl, .steatment .steatment__ttl {
   font-size: 32px;
-  margin: 32px 0;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -98,10 +97,67 @@ section:nth-child(odd) {
   font-size: 20px;
 }
 
-.access .access-map {
-  height: 300px;
+.access .access-list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-bottom: 32px;
+}
+
+.access .access-list .access-list__item {
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .access .access-list .access-list__item {
+    width: 100%;
+  }
+}
+
+.access .access-list .access-map {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  height: 300px;
   width: 100%;
+}
+
+.access-table {
+  border-collapse: separate;
+  border-spacing: 0 32px;
+  font-size: 16px;
+  padding: 0 16px 16px 16px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .access-table {
+    font-size: 14px;
+  }
+}
+
+.access-table .access-table__th {
+  border-right: 2px solid #2f87bf;
+  padding-right: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .access-table .access-table__th {
+    font-size: 14px;
+    padding-right: 8px;
+    width: 80px;
+  }
+}
+
+.access-table .access-table__td {
+  padding-left: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .access-table .access-table__td {
+    font-size: 14px;
+    padding-right: 8px;
+  }
 }
 
 .accordion {
@@ -406,6 +462,7 @@ section:nth-child(odd) {
 .headline .headline__txt {
   display: block;
   font-size: 10px;
+  height: 32px;
   padding: 8px 0;
 }
 
@@ -413,13 +470,12 @@ section:nth-child(odd) {
   height: 100%;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 40px;
   width: 1150px;
 }
 
 @media screen and (max-width: 767px) {
   .inner {
-    padding: 0 32px;
+    padding: 0 24px;
   }
 }
 
@@ -519,7 +575,7 @@ section:nth-child(odd) {
 
 @media screen and (max-width: 767px) {
   .news .news-list .news-list__item .news-list__date {
-    width: 50%;
+    width: 96px;
   }
 }
 
@@ -548,6 +604,7 @@ section:nth-child(odd) {
   .news .news-list .news-list__item .news-list__cat .news-list__cat-link {
     font-size: 14px;
     padding: 4px;
+    width: 96px;
   }
 }
 

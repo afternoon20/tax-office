@@ -1,5 +1,6 @@
 .drawer-hamburger {
   display: none;
+  right: 15px !important;
 
   @include mq('sp') {
     display: block;
@@ -28,4 +29,8 @@
 
 .drawer-nav {
   z-index: 9999;
+}
+
+.drawer-menu-item {
+  font-size: 12px;
 }

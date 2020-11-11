@@ -24,22 +24,23 @@
   }
 }
 
-.header-nav__list {
+.header-nav-list {
   @include flex();
 }
 
-.header-nav__list-item {
+.header-nav-list__item {
   margin-right: 40px;
+
   &:last-child {
     margin-right: 0;
   }
-}
 
-.header-nav__list-link {
-  font-size: 1.6rem;
-  color: #fff;
+  .header-nav-list__link {
+    font-size: 1.6rem;
+    color: #fff;
 
-  &:hover {
-    opacity: 0.5;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

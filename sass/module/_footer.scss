@@ -49,6 +49,7 @@
 
     .footer-copy__txt {
       height: 100%;
+      padding: 16px 0;
 
       @include mq('sp') {
         font-size: 12px;
@@ -59,19 +60,20 @@
 
 .footer-nav {
   margin-left: auto;
-}
 
-.footer-nav-list {
-  margin-top: 16px;
+  .footer-nav-list {
+    margin-top: 16px;
 
-  .footer-nav-list__item {
-    margin-bottom: 8px;
+    .footer-nav-list__item {
+      margin-bottom: 8px;
 
-    .footer-nav__list__link {
-      font-size: 1.6rem;
+      .footer-nav-list__link {
+        font-size: 14px;
+        transition: all 0.2s ease-out;
 
-      &::before {
-        content: '&:gt;';
+        &:hover {
+          color: lighten($base-color, 10%);
+        }
       }
     }
   }

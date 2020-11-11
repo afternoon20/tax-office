@@ -4,6 +4,7 @@
   height: 60px;
   width: 100%;
   background: $header-color;
+  @include shadow();
 }
 
 .header-wrapper {
@@ -38,6 +39,7 @@
   .header-nav-list__link {
     font-size: 1.6rem;
     color: #fff;
+    transition: all 0.2s ease-out;
 
     &:hover {
       opacity: 0.5;

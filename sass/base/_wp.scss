@@ -1,8 +1,9 @@
 .wp-ttl-wrapper {
   display: block;
-  background: url(../img/dist/service03.jpg) center center no-repeat;
+  // background: url(../img/dist/service03.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: lighten($base-color, 40%);
 
   .wp-ttl {
     @extend %top-h2;
@@ -29,6 +30,12 @@
     text-align: center;
     background-color: lighten($base-color, 50%);
     margin-right: 8px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: lighten($base-color, 20%);
+      color: #fff;
+    }
 
     &:last-child {
       margin-right: 0;

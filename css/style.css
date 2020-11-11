@@ -98,14 +98,16 @@ section:nth-child(odd) {
   background-color: #f3f1ed;
 }
 
-.wp-ttl-wrapper .wp-ttl, .access .access__ttl, .customer .customer__ttl, .post .post__ttl, .question .question__ttl, .service .service__ttl, .steatment .steatment__ttl {
+.wp-ttl-wrapper .wp-ttl,
+.top-h2 {
   font-size: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  .wp-ttl-wrapper .wp-ttl, .access .access__ttl, .customer .customer__ttl, .post .post__ttl, .question .question__ttl, .service .service__ttl, .steatment .steatment__ttl {
+  .wp-ttl-wrapper .wp-ttl,
+  .top-h2 {
     font-size: 24px;
   }
 }
@@ -116,8 +118,8 @@ section:nth-child(odd) {
 }
 
 .wp-ttl-wrapper {
-  background: url(../img/dist/service03.jpg) center center no-repeat;
   background-attachment: fixed;
+  background-color: #c8e2f2;
   background-size: cover;
   display: block;
 }
@@ -151,7 +153,13 @@ section:nth-child(odd) {
   line-height: 40px;
   margin-right: 8px;
   text-align: center;
+  transition: all 0.2s ease-out;
   width: 40px;
+}
+
+.wp-pagination .wp-pagination__nums:hover {
+  background-color: #77b5dd;
+  color: #fff;
 }
 
 .wp-pagination .wp-pagination__nums:last-child {
@@ -567,7 +575,7 @@ section:nth-child(odd) {
 
 .drawer-hamburger {
   display: none;
-  right: 15px !important;
+  padding-right: 16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -660,6 +668,7 @@ section:nth-child(odd) {
 
 .footer .footer-copy .footer-copy__txt {
   height: 100%;
+  padding: 16px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -672,24 +681,26 @@ section:nth-child(odd) {
   margin-left: auto;
 }
 
-.footer-nav-list {
+.footer-nav .footer-nav-list {
   margin-top: 16px;
 }
 
-.footer-nav-list .footer-nav-list__item {
+.footer-nav .footer-nav-list .footer-nav-list__item {
   margin-bottom: 8px;
 }
 
-.footer-nav-list .footer-nav-list__item .footer-nav__list__link {
-  font-size: 1.6rem;
+.footer-nav .footer-nav-list .footer-nav-list__item .footer-nav-list__link {
+  font-size: 14px;
+  transition: all 0.2s ease-out;
 }
 
-.footer-nav-list .footer-nav-list__item .footer-nav__list__link::before {
-  content: '&:gt;';
+.footer-nav .footer-nav-list .footer-nav-list__item .footer-nav-list__link:hover {
+  color: #4e9fd3;
 }
 
 .header {
   background: #2f87bf;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   height: 60px;
   position: relative;
   top: 0;
@@ -739,6 +750,7 @@ section:nth-child(odd) {
 .header-nav-list__item .header-nav-list__link {
   color: #fff;
   font-size: 1.6rem;
+  transition: all 0.2s ease-out;
 }
 
 .header-nav-list__item .header-nav-list__link:hover {
@@ -896,6 +908,7 @@ section:nth-child(odd) {
   color: #fff;
   display: block;
   padding: 8px;
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -904,6 +917,10 @@ section:nth-child(odd) {
     padding: 0;
     width: 96px;
   }
+}
+
+.post .post-list .post-list__item .post-list__cat .post-list__cat-link:hover {
+  background-color: #256a96;
 }
 
 .post .post-list .post-list__item .post-list__ttl {
@@ -921,6 +938,11 @@ section:nth-child(odd) {
 
 .post .post-list .post-list__item .post-list__link {
   display: block;
+  transition: all 0.2s ease-out;
+}
+
+.post .post-list .post-list__item .post-list__link:hover {
+  color: #4e9fd3;
 }
 
 .post .post-wrapper {
@@ -936,7 +958,7 @@ section:nth-child(odd) {
   padding: 8px 32px;
 }
 
-.service .service__ttl {
+.service {
   margin-top: 30px;
 }
 

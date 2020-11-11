@@ -1,8 +1,4 @@
 .steatment {
-  .steatment__ttl {
-    @extend %top-h2;
-  }
-
   .steatment-wrapper {
     @include flex($align: flex-start);
   }

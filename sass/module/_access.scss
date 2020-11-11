@@ -1,8 +1,4 @@
 .access {
-  .access__ttl {
-    @extend %top-h2;
-  }
-
   .access-list {
     @include flex($align: flex-start);
 

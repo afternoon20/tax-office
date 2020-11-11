@@ -1,6 +1,6 @@
 .drawer-hamburger {
   display: none;
-  right: 15px !important;
+  padding-right: 16px;
 
   @include mq('sp') {
     display: block;

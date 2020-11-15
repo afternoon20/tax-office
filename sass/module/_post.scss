@@ -1,5 +1,58 @@
 .post {
   font-size: 16px;
+  margin: 48px 0;
+
+  h2,
+  .post__h2 {
+    font-size: 24px;
+    margin: 32px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $base-color;
+    font-weight: 600;
+  }
+
+  h3,
+  .post__h3 {
+    font-size: 24px;
+    margin: 24px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed $base-color;
+  }
+
+  h4,
+  .post__h4 {
+    font-size: 20px;
+    margin: 20px 0;
+    padding-bottom: 8px;
+    font-weight: 600;
+  }
+
+  h5,
+  .post__h4 {
+    font-size: 20px;
+    margin: 20px 0;
+    padding-bottom: 8px;
+  }
+
+  p.post__txt {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+
+  .post-header {
+    margin-bottom: 16px;
+  }
+  .post__date {
+    text-align: left;
+    margin: 0 16px 16px 0;
+  }
+
+  .post__img {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+    @include shadow();
+  }
 
   .post-list {
     @include flex();
@@ -86,10 +139,31 @@
 
   .post__btn {
     display: inline-block;
-    color: #fff;
-    background-color: $emp-color;
+    border: 1px dashed #aaa;
     font-size: 16px;
     padding: 8px 32px;
     // border-radius: 5px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: $emp-color;
+      color: #fff;
+      border: 1px solid $emp-color;
+    }
+  }
+}
+
+.post-nav {
+  @include flex($justify: space-between);
+  font-size: 16px;
+  margin: 56px 0;
+
+  .post-nav__link {
+    padding: 0 6px 6px 6px;
+    border-bottom: 1px solid #fff;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
   }
 }

@@ -26,6 +26,7 @@
 
   .steatment__right {
     width: 50%;
+    text-align: justify;
 
     @include mq('tab') {
       width: 100%;

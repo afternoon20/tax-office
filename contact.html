@@ -46,23 +46,62 @@
           </h1>
           <nav class="header-nav">
             <ul class="header-nav-list">
-              <li class="header-nav-list__item"><a href="" class="header-nav-list__link">トップ</a></li>
+              <li class="header-nav-list__item"><a href="/" class="header-nav-list__link">トップ</a></li>
               <li class="header-nav-list__item"><a href="news.html" class="header-nav-list__link">お知らせ</a></li>
-              <li class="header-nav-list__item"><a href="" class="header-nav-list__link">事務所案内</a></li>
+              <li class="header-nav-list__item"><a href="about.html" class="header-nav-list__link">事務所案内</a></li>
               <li class="header-nav-list__item"><a href="blog.html" class="header-nav-list__link">税理士ブログ</a></li>
-              <li class="header-nav-list__item"><a href="" class="header-nav-list__link">お問い合わせ</a></li>
+              <li class="header-nav-list__item"><a href="contact.html" class="header-nav-list__link">お問い合わせ</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
+    <div class="wp-ttl-wrapper">
+      <h1 class="wp-ttl page-title screen-reader-text">お問い合わせ</h1>
+    </div>
+    <div class="inner">
+      <div class="bread"><a href="#" class="bread__link">トップ</a> &gt; お問い合わせ</div>
+    </div>
     <main id="main primary" class="site-main">
-      <header class="wp-ttl-wrapper">
-        <h1 class="wp-ttl page-title screen-reader-text">お問い合わせ</h1>
-      </header>
-      <section id="post" class="post" data-wow-delay="1s">
-        <div class="inner wow fadeInLeft" data-wow-delay=".5">ここに問い合わせ</div>
-      </section>
+      <div id="contact" class="contact" data-wow-delay="1s">
+        <div class="inner wow fadeInLeft" data-wow-delay=".5">
+          <p class="contact__txt">
+            無料ご相談のお問い合わせや、質問があれば下記のフォームをご記入の上、送信ボタンを押してください。後日、メールの内容を確認し返信いたします。ご記入いただいた内容は、メールの返信以外には利用いたしません。
+          </p>
+          <form action="#" class="contact-form">
+            <table class="contact-table">
+              <tbody class="contact-table__body">
+                <tr class="contact-table__tr">
+                  <th class="contact-table__th">お名前<span class="contact-table__required">必須</span></th>
+                  <td class="contact-table__td">
+                    <input type="text" name="name" id="name" class="contact-form__input" required />
+                  </td>
+                </tr>
+                <tr class="contact-table__tr">
+                  <th class="contact-table__th">メールアドレス<span class="contact-table__required">必須</span></th>
+                  <td class="contact-table__td">
+                    <input type="email" name="name" id="email" class="contact-form__input" required />
+                    <p class="contact-table__txt">※メールアドレスにお間違いないか再度ご確認ください。</p>
+                  </td>
+                </tr>
+                <tr class="contact-table__tr">
+                  <th class="contact-table__th">件名<span class="contact-table__required">必須</span></th>
+                  <td class="contact-table__td">
+                    <input type="text" name="subject" id="subject" class="contact-form__input" required />
+                  </td>
+                </tr>
+                <tr class="contact-table__tr">
+                  <th class="contact-table__th">内容<span class="contact-table__required">必須</span></th>
+                  <td class="contact-table__td"><textarea name="name" id="content" class="contact-form__textarea" required></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="contact-form-wrapper">
+              <input type="submit" value="送信する" class="contact-form__submit" />
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="inner">

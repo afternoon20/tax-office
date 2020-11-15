@@ -1,6 +1,9 @@
 .post {
   font-size: 16px;
-  margin: 48px 0;
+  margin: 16px 0 48px 0;
+  @include mq('sp') {
+    font-size: 14px;
+  }
 
   h2,
   .post__h2 {
@@ -51,7 +54,6 @@
     width: 100%;
     margin-bottom: 16px;
     text-align: center;
-    @include shadow();
   }
 
   .post-list {

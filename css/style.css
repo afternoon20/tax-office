@@ -375,13 +375,13 @@ section:nth-child(odd) {
 
 @media screen and (max-width: 767px) {
   .bread {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 .bread .bread__link {
   border-bottom: 1px solid #fff;
-  padding: 0 6px 6px 6px;
+  padding: 0 6px 6px 0;
 }
 
 .bread .bread__link:hover {
@@ -527,7 +527,7 @@ section:nth-child(odd) {
 }
 
 .contact {
-  padding: 64px 0 80px 0;
+  padding: 32px 0 80px 0;
 }
 
 .contact .contact__txt {
@@ -1076,7 +1076,13 @@ section:nth-child(odd) {
 
 .post {
   font-size: 16px;
-  margin: 48px 0;
+  margin: 16px 0 48px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .post {
+    font-size: 14px;
+  }
 }
 
 .post h2,
@@ -1126,7 +1132,6 @@ section:nth-child(odd) {
 }
 
 .post .post__img {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   margin-bottom: 16px;
   text-align: center;
   width: 100%;

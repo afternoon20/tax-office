@@ -3,11 +3,11 @@
   font-size: 16px;
 
   @include mq('sp') {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .bread__link {
-    padding: 0 6px 6px 6px;
+    padding: 0 6px 6px 0;
     border-bottom: 1px solid #fff;
 
     &:hover {

@@ -1076,7 +1076,6 @@ section:nth-child(odd) {
 
 .post {
   font-size: 16px;
-  margin: 16px 0 48px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1085,7 +1084,6 @@ section:nth-child(odd) {
   }
 }
 
-.post h2,
 .post .post__h2 {
   border-bottom: 1px solid #2f87bf;
   font-size: 24px;

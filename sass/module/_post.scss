@@ -1,11 +1,10 @@
 .post {
   font-size: 16px;
-  margin: 16px 0 48px 0;
+  // margin: 0 0 48px 0;
   @include mq('sp') {
     font-size: 14px;
   }
 
-  h2,
   .post__h2 {
     font-size: 24px;
     margin: 32px 0;
@@ -31,13 +30,14 @@
   }
 
   h5,
-  .post__h4 {
+  .post__h5 {
     font-size: 20px;
     margin: 20px 0;
     padding-bottom: 8px;
   }
 
-  p.post__txt {
+  p,
+  .post__txt {
     font-size: 16px;
     margin: 4px 0;
   }
@@ -96,7 +96,6 @@
           color: #fff;
           background-color: lighten($base-color, 10%);
           padding: 8px;
-          transition: all 0.5s ease-out;
 
           @include mq('sp') {
             padding: 0;
@@ -155,12 +154,13 @@
   }
 }
 
-.post-nav {
+// Single page Navigation
+.nav-links {
   @include flex($justify: space-between);
   font-size: 16px;
   margin: 56px 0;
 
-  .post-nav__link {
+  .nav-title {
     padding: 0 6px 6px 6px;
     border-bottom: 1px solid #fff;
 

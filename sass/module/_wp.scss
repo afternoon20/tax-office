@@ -18,12 +18,20 @@
   }
 }
 
-.wp-pagination {
+.wp-pagenavi {
   @include flex($justify: center);
   margin-top: 72px;
   font-size: 16px;
+  margin-bottom: 32px;
 
-  .wp-pagination__nums {
+  .pages {
+    display: none;
+  }
+
+  .current,
+  .page,
+  .previouspostslink,
+  .nextpostslink {
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -42,8 +50,32 @@
     }
   }
 
-  .wp-pagination__nums--current {
+  .current {
     color: #fff;
     background-color: $base-color;
+  }
+}
+
+.post-body {
+  padding-bottom: 48px;
+
+  h2 {
+    @extend .post__h2;
+  }
+
+  h3 {
+    @extend .post__h3;
+  }
+
+  h4 {
+    @extend .post__h4;
+  }
+
+  h5 {
+    @extend .post__h5;
+  }
+
+  p {
+    @extend .post__txt;
   }
 }

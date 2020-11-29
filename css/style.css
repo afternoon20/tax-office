@@ -117,60 +117,6 @@ section:nth-child(odd) {
   font-size: 20px;
 }
 
-.wp-ttl-wrapper {
-  background-attachment: fixed;
-  background-color: #c8e2f2;
-  background-size: cover;
-  display: block;
-}
-
-.wp-ttl-wrapper .wp-ttl {
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 0;
-  padding: 80px 0;
-}
-
-@media screen and (max-width: 767px) {
-  .wp-ttl-wrapper .wp-ttl {
-    padding: 64px 0;
-  }
-}
-
-.wp-pagination {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 16px;
-  justify-content: center;
-  margin-top: 72px;
-}
-
-.wp-pagination .wp-pagination__nums {
-  background-color: #f1f8fc;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 8px;
-  text-align: center;
-  transition: all 0.2s ease-out;
-  width: 40px;
-}
-
-.wp-pagination .wp-pagination__nums:hover {
-  background-color: #77b5dd;
-  color: #fff;
-}
-
-.wp-pagination .wp-pagination__nums:last-child {
-  margin-right: 0;
-}
-
-.wp-pagination .wp-pagination__nums--current {
-  background-color: #2f87bf;
-  color: #fff;
-}
-
 .access .access-list {
   align-items: flex-start;
   display: flex;
@@ -388,6 +334,15 @@ section:nth-child(odd) {
   border-bottom: 1px solid #000;
 }
 
+.bread > span > a {
+  border-bottom: 1px solid #fff;
+  padding: 0 6px 6px 0;
+}
+
+.bread > span > a:hover {
+  border-bottom: 1px solid #000;
+}
+
 .btn {
   background-color: #e79c2a;
   border-radius: 5px;
@@ -527,7 +482,7 @@ section:nth-child(odd) {
 }
 
 .contact {
-  padding: 32px 0 80px 0;
+  padding: 0 0 80px 0;
 }
 
 .contact .contact__txt {
@@ -553,6 +508,7 @@ section:nth-child(odd) {
 .contact .contact-table .contact-table__th {
   background-color: #eee;
   border: 1px solid #ccc;
+  font-size: 16px;
   padding: 24px 0 24px 24px;
   vertical-align: top;
   width: 280px;
@@ -593,7 +549,7 @@ section:nth-child(odd) {
   font-size: 16px;
 }
 
-.contact .contact-form .contact-form__input {
+.contact .contact-form__input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -612,13 +568,13 @@ section:nth-child(odd) {
   width: 100%;
 }
 
-.contact .contact-form .contact-form__input:focus {
+.contact .contact-form__input:focus {
   border: 1px solid rgba(0, 0, 0, 0.32);
   box-shadow: none;
   outline: none;
 }
 
-.contact .contact-form .contact-form__textarea {
+.contact .contact-form__textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -636,18 +592,18 @@ section:nth-child(odd) {
   width: 100%;
 }
 
-.contact .contact-form .contact-form__textarea:focus {
+.contact .contact-form__textarea:focus {
   border: 1px solid rgba(0, 0, 0, 0.32);
   box-shadow: none;
   outline: none;
 }
 
-.contact .contact-form .contact-form-wrapper {
+.contact .contact-form-wrapper {
   margin-top: 32px;
   text-align: center;
 }
 
-.contact .contact-form .contact-form__submit {
+.contact .contact-form__submit {
   -webkit-appearance: none;
   background-color: #e79c2a;
   background-image: none;
@@ -660,22 +616,23 @@ section:nth-child(odd) {
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
+  font-size: 16px;
   margin: 0 0 1em;
   padding: 16px 80px;
   text-decoration: none;
   transition: all 0.5s ease-out;
 }
 
-.contact .contact-form .contact-form__submit:focus {
+.contact .contact-form__submit:focus {
   outline: none;
 }
 
-.contact .contact-form .contact-form__submit::-moz-foucus-inner {
+.contact .contact-form__submit::-moz-foucus-inner {
   border: none;
   padding: 0;
 }
 
-.contact .contact-form .contact-form__submit:hover {
+.contact .contact-form__submit:hover {
   background-color: #c88116;
 }
 
@@ -1076,7 +1033,6 @@ section:nth-child(odd) {
 
 .post {
   font-size: 16px;
-  margin: 16px 0 48px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1085,8 +1041,7 @@ section:nth-child(odd) {
   }
 }
 
-.post h2,
-.post .post__h2 {
+.post .post__h2, .post .post-body h2, .post-body .post h2 {
   border-bottom: 1px solid #2f87bf;
   font-size: 24px;
   font-weight: 600;
@@ -1095,7 +1050,9 @@ section:nth-child(odd) {
 }
 
 .post h3,
-.post .post__h3 {
+.post .post__h3,
+.post .post-body h3,
+.post-body .post h3 {
   border-bottom: 1px dashed #2f87bf;
   font-size: 24px;
   margin: 24px 0;
@@ -1103,7 +1060,9 @@ section:nth-child(odd) {
 }
 
 .post h4,
-.post .post__h4 {
+.post .post__h4,
+.post .post-body h4,
+.post-body .post h4 {
   font-size: 20px;
   font-weight: 600;
   margin: 20px 0;
@@ -1111,13 +1070,18 @@ section:nth-child(odd) {
 }
 
 .post h5,
-.post .post__h4 {
+.post .post__h5,
+.post .post-body h5,
+.post-body .post h5 {
   font-size: 20px;
   margin: 20px 0;
   padding-bottom: 8px;
 }
 
-.post p.post__txt {
+.post p,
+.post .post__txt,
+.post .post-body p,
+.post-body .post p {
   font-size: 16px;
   margin: 4px 0;
 }
@@ -1193,7 +1157,6 @@ section:nth-child(odd) {
   color: #fff;
   display: block;
   padding: 8px;
-  transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -1249,7 +1212,7 @@ section:nth-child(odd) {
   color: #fff;
 }
 
-.post-nav {
+.nav-links {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -1259,12 +1222,12 @@ section:nth-child(odd) {
   margin: 56px 0;
 }
 
-.post-nav .post-nav__link {
+.nav-links .nav-title {
   border-bottom: 1px solid #fff;
   padding: 0 6px 6px 6px;
 }
 
-.post-nav .post-nav__link:hover {
+.nav-links .nav-title:hover {
   border-bottom: 1px solid #000;
 }
 
@@ -1452,4 +1415,76 @@ section:nth-child(odd) {
 
 .contents-area .contents--show {
   display: block;
+}
+
+.wp-ttl-wrapper {
+  background-attachment: fixed;
+  background-color: #c8e2f2;
+  background-size: cover;
+  display: block;
+}
+
+.wp-ttl-wrapper .wp-ttl {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .wp-ttl-wrapper .wp-ttl {
+    padding: 64px 0;
+  }
+}
+
+.wp-pagenavi {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-top: 72px;
+}
+
+.wp-pagenavi .pages {
+  display: none;
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi .page,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  background-color: #f1f8fc;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 8px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  width: 40px;
+}
+
+.wp-pagenavi .current:hover,
+.wp-pagenavi .page:hover,
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover {
+  background-color: #77b5dd;
+  color: #fff;
+}
+
+.wp-pagenavi .current:last-child,
+.wp-pagenavi .page:last-child,
+.wp-pagenavi .previouspostslink:last-child,
+.wp-pagenavi .nextpostslink:last-child {
+  margin-right: 0;
+}
+
+.wp-pagenavi .current {
+  background-color: #2f87bf;
+  color: #fff;
+}
+
+.post-body {
+  padding-bottom: 48px;
 }

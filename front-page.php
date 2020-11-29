@@ -1,61 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- Font Awesome -->
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <title>山田太郎税理士事務所</title>
-  </head>
-  <body class="drawer drawer--right">
-    <!-- drawer.js -->
-    <div role="banner">
-      <button type="button" class="drawer-toggle drawer-hamburger">
-        <spans class="sr-only">toggle navigation</spans>
-        <span class="drawer-hamburger-icon"></span>
-      </button>
-      <nav class="drawer-nav" role="navigation">
-        <ul class="drawer-menu">
-          <li><a class="drawer-brand" href="#">メニュー</a></li>
-          <li><a class="drawer-menu-item" href="index.html">トップ</a></li>
-          <li><a class="drawer-menu-item" href="news.html">おしらせ</a></li>
-          <li><a class="drawer-menu-item" href="about.html">事務所案内</a></li>
-          <li><a class="drawer-menu-item" href="blog.html">税理士ブログ</a></li>
-          <li><a class="drawer-menu-item" href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="headline">
-      <div class="inner">
-        <span class="headline__txt">世田谷区を中心に活動する 、ベンチャー企業に特化した税理士会計事務所です。</span>
-      </div>
-    </div>
-    <header class="header">
-      <div class="inner">
-        <div class="header-wrapper">
-          <h1 class="header-logo">
-            <a href="/" class="header-logo__link">山田太郎税理士事務所</a>
-          </h1>
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li class="header-nav-list__item"><a href="index.html" class="header-nav-list__link">トップ</a></li>
-              <li class="header-nav-list__item"><a href="news.html" class="header-nav-list__link">お知らせ</a></li>
-              <li class="header-nav-list__item"><a href="about.html" class="header-nav-list__link">事務所案内</a></li>
-              <li class="header-nav-list__item"><a href="blog.html" class="header-nav-list__link">税理士ブログ</a></li>
-              <li class="header-nav-list__item"><a href="contact.html" class="header-nav-list__link">お問い合わせ</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+<?php 
+
+/*
+  Template Name:フロントページ
+
+ */
+
+
+get_header() ?>
     <main id="main">
       <!-- メインビジュアル -->
       <div id="mv" class="mv">
@@ -77,13 +28,13 @@
               </div>
             </div>
             <div class="carousel-item carousel-item--01 active">
-              <!-- <img src="img/dist/mv01.jpg" class="d-block w-100" alt="..." /> -->
+              <!-- <img src="<?php bloginfo('template_directory'); ?>/img/dist/mv01.jpg" class="d-block w-100" alt="..." /> -->
             </div>
             <div class="carousel-item carousel-item--02">
-              <!-- <img src="img/dist/key_visual2.jpg" class="d-block w-100" alt="..." /> -->
+              <!-- <img src="<?php bloginfo('template_directory'); ?>/img/dist/key_visual2.jpg" class="d-block w-100" alt="..." /> -->
             </div>
             <div class="carousel-item carousel-item--03">
-              <!-- <img src="img/dist/key_visual3.jpg" class="d-block w-100" alt="..." /> -->
+              <!-- <img src="<?php bloginfo('template_directory'); ?>/img/dist/key_visual3.jpg" class="d-block w-100" alt="..." /> -->
             </div>
           </div>
         </div>
@@ -117,7 +68,7 @@
           <h2 class="top-h2">代表挨拶</h2>
           <div class="steatment-wrapper">
             <div class="steatment__left">
-              <img src="img/dist/person01.png" alt="代表　山田太郎の写真" class="steatment__img" />
+              <img src="<?php bloginfo('template_directory'); ?>/img/dist/person01.png" alt="代表　山田太郎の写真" class="steatment__img" />
             </div>
             <div class="steatment__right">
               <em class="steatment__speach">お客様の第一の理解者として<br class="br-sp" />サポートしたい</em>
@@ -144,7 +95,7 @@
             <li class="customer-list__item"><i class="customer-list__icon fas fa-check-circle"></i>個人事業から法人化のメリットを知りたい。</li>
           </ul>
           <div class="customer__arrow"></div>
-          <a href="" class="btn">お問い合わせ</a>
+          <a href="<?php echo ( home_url( '/' ) )."contact"; ?>" class="btn">お問い合わせ</a>
         </div>
       </section>
       <section id="post" class="post" data-wow-delay="1s">
@@ -157,61 +108,46 @@
           <div class="contents-area">
             <div class="contents contents--show">
               <ul class="post-list">
+              <?php
+                $the_query = new WP_Query( array(
+                    'post_type' => 'news',
+                    'posts_per_page' => 5,
+                     ));
+                if($the_query->have_posts()):
+              ?>
+              <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                 <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.04.30</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">イベント</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">相続税相談会を開催いたします</a></span>
+                  <span class="post-list__date"><i class="far fa-clock"></i><?php echo get_the_date(); ?></span>
+                  <span class="post-list__cat"><a href="<?php echo ( home_url( '/' ) )."news"; ?>" class="post-list__cat-link">お知らせ</a></span>
+                  <span class="post-list__ttl"><a href="<?php the_permalink(); ?>" class="post-list__link"><?php echo get_the_title(); ?></a></span>
                 </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.07.10</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">お知らせ</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">2020年夏季休暇のお知らせ</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.04.30</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">イベント</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">相続税相談会を開催いたします</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.03.20</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">イベント</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">セミナー「持続化給付金の申請方法について」を開催します</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.01.01</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">お知らせ</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">2020年年始のご挨拶</a></span>
-                </li>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+              <?php else: ?>
+              <!-- 投稿が無い場合の処理 -->
+              <?php endif; ?>
               </ul>
               <div class="post-wrapper">
-                <a href="#" class="post__btn">もっと見る</a>
+                <a href="<?php echo ( home_url( '/' ) )."news"; ?>" class="post__btn">もっと見る</a>
               </div>
             </div>
             <div class="contents">
               <ul class="post-list">
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.07.10</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">その他</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">2020年から酒税が改正されます</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.04.30</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">法人税</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">固定資産と減価償却費について</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.03.20</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">法人税</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">令和２年度税制改正について</a></span>
-                </li>
-                <li class="post-list__item">
-                  <span class="post-list__date"><i class="far fa-clock"></i>2020.01.12</span>
-                  <span class="post-list__cat"><a href="" class="post-list__cat-link">所得税</a></span>
-                  <span class="post-list__ttl"><a href="post.html" class="post-list__link">払い忘れの源泉税について</a></span>
-                </li>
+               <?php
+                $the_query = new WP_Query( array(
+                    'posts_per_page' => 5,
+                     ));
+                if($the_query->have_posts()):
+              ?>
+              <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+              <?php get_template_part( 'template-parts/content', 'blog' ); ?>
+                 <?php endwhile; ?>
+              <?php else: ?>
+	             <h2>記事がありません</h2>
+              <?php endif; ?>
               </ul>
               <div class="post-wrapper">
-                <a href="#" class="post__btn">もっと見る</a>
+                <a href="<?php echo ( home_url( '/' ) )."blog"; ?>" class="post__btn">もっと見る</a>
               </div>
             </div>
           </div>
@@ -314,48 +250,4 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="inner">
-        <div class="footer-top">
-          <div class="footer-left">
-            <h1 class="footer-logo">
-              <a href="/" class="footer-logo__link">山田太郎税理士事務所</a>
-            </h1>
-            <p class="footer__txt">〒154-8504<br />東京都世田谷区世田谷23丁目87-2</p>
-            <p class="footer__txt">TEL: 0120-123-4567</p>
-            <p class="footer__txt">Email: yamadataro-tax@ytax.com</p>
-          </div>
-          <div class="footer-right">
-            <p class="footer__txt">世田谷区を中心に活動する 、ベンチャー企業に特化した税理士会計事務所です。</p>
-            <nav class="footer-nav">
-              <ul class="footer-nav-list">
-                <li class="footer-nav-list__item"><a href="index.html" class="footer-nav-list__link">&gt;トップ</a></li>
-                <li class="footer-nav-list__item"><a href="news.html" class="footer-nav-list__link">&gt;お知らせ</a></li>
-                <li class="footer-nav-list__item"><a href="about.html" class="footer-nav-list__link">&gt;事務所案内</a></li>
-                <li class="footer-nav-list__item"><a href="blog.html" class="footer-nav-list__link">&gt;税理士ブログ</a></li>
-                <li class="footer-nav-list__item"><a href="contact.html" class="footer-nav-list__link">&gt;お問い合わせ</a></li>
-                <li class="footer-nav-list__item"><a href="" class="footer-nav-list__link">&gt;サイトマップ</a></li>
-                <li class="footer-nav-list__item"><a href="" class="footer-nav-list__link">&gt;プライバシーポリシー</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copy">
-        <div class="inner">
-          <p class="footer-copy__txt">
-            Copyright © 2020 Taro Yamada Tax Office <br class="br-sp" />
-            All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+<?php get_footer() ?>

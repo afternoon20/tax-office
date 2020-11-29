@@ -7,7 +7,7 @@ WordPress を使ったコーポレートサイト(架空)です。デザイン�
 ## デモサイト
 
 - [山田太郎税理士事務所](http://xd162417.wp.xdomain.jp/)
-- [モックアップ](http://xd162417.wp.xdomain.jp/)
+- [モックアップ](https://afternoon20.github.io/tax-office/)
 
 ## 開発環境
 

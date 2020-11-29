@@ -20,7 +20,7 @@
 
 .wp-pagination {
   @include flex($justify: center);
-  margin-top: 72px;
+  margin: 72px 0 32px 0;
   font-size: 16px;
 
   .wp-pagination__nums {

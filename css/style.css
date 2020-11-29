@@ -144,7 +144,7 @@ section:nth-child(odd) {
   flex-wrap: wrap;
   font-size: 16px;
   justify-content: center;
-  margin-top: 72px;
+  margin: 72px 0 32px 0;
 }
 
 .wp-pagination .wp-pagination__nums {
@@ -1084,6 +1084,7 @@ section:nth-child(odd) {
   }
 }
 
+.post h2,
 .post .post__h2 {
   border-bottom: 1px solid #2f87bf;
   font-size: 24px;
